@@ -1,0 +1,22 @@
+[
+    {
+        "match": [ { "Agen": 0, "Racing": 1 }],
+        "winner": [ { "Agen": 0 } ]
+    },
+    {
+        "match": [ { "SF": 0, "La Rochelle": 1 }],
+        "winner": [ { "SF": 0 } ]
+    },
+    {
+        "match": [ { "CO": 0, "UBB": 1 }],
+        "winner": [ { "CO": 0 } ]
+    },
+    {
+        "match": [ { "LOU": 0, "Oyo": 1 }],
+        "winner": [ { "Oyo": 1 } ]
+    },
+    {
+        "match": [ { "Montpellier": 0, "Oyo": 1 }],
+        "winner": [ { "Oyo": 1 } ]
+    }
+]
