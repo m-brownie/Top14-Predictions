@@ -1,5 +1,4 @@
 const brain = require('brain.js');
-const resultats_2017_2018 = require('./2017_2018_results');
 
 const network = new brain.NeuralNetwork();
 
@@ -33,7 +32,6 @@ const network = new brain.NeuralNetwork();
 // Perpignan
 // Grenoble
 
-// Results for next day
 network.train([
 
     // Saison 2017/2018 - J1
