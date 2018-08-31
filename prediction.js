@@ -229,6 +229,8 @@ network.train([
     // Saison 2017/2018 - Finale
     {input: { MHR: 0, Castres: 1 }, output: { Castres: 1 } },
 
+    /** ------------------------------------------------------------------------------------ **/
+
     // Saison 2018/2019 - J1
     {input: { Perpignan: 0, Stade_Français: 0 }, output: { Stade_Français: 1 } },
     {input: { UBB: 1, Section_Paloise: 0 }, output: { UBB: 1 } },
@@ -240,6 +242,7 @@ network.train([
 
 ]);
 
+// Prédiction Racing vs ASM - J2 
 const output = network.run({ Racing: 0.5, ASM: 0.5 });
 
 console.log(output);
