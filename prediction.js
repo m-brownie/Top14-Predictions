@@ -238,7 +238,16 @@ network.train([
     {input: { LOU: 0.5, Stade_Toulousain: 0.5 }, output: { Tie: 1 } },
     {input: { Stade_Rochelais: 1, Grenoble: 0 }, output: { Stade_Rochelais: 1 } },
     {input: { RCT: 0, Racing: 1 }, output: { Racing: 1 } },
-    {input: { MHR: 0, Castres: 1 }, output: { Castres: 1 } }
+    {input: { MHR: 0, Castres: 1 }, output: { Castres: 1 } },
+
+    // Saison 2018/2019 - J2
+    {input: { Section_Paloise: 1, RCT: 0 }, output: { Section_Paloise: 1 } },
+    {input: { Castres: 1, LOU: 0 }, output: { Castres: 1 } },
+    {input: { MHR: 1, Stade_Rochelais: 0 }, output: { MHR: 1 } },
+    {input: { Stade_Français: 1, UBB: 0 }, output: { Stade_Français: 1 } },
+    {input: { Grenoble: 0, Stade_Toulousain: 0 }, output: { Stade_Toulousain: 1 } },
+    {input: { SU_Agen: 1, Perpignan: 0 }, output: { SU_Agen: 1 } },
+    {input: { Racing: 0, ASM: 1 }, output: { ASM: 1 } }
 
 ]);
 
