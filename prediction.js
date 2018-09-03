@@ -1,5 +1,4 @@
 const brain = require('brain.js');
-const resultats_2017_2018 = require('./2017_2018_results');
 
 const network = new brain.NeuralNetwork();
 
@@ -33,7 +32,6 @@ const network = new brain.NeuralNetwork();
 // Perpignan
 // Grenoble
 
-// Results for next day
 network.train([
 
     // Saison 2017/2018 - J1
@@ -231,6 +229,8 @@ network.train([
     // Saison 2017/2018 - Finale
     {input: { MHR: 0, Castres: 1 }, output: { Castres: 1 } },
 
+    /** ------------------------------------------------------------------------------------ **/
+
     // Saison 2018/2019 - J1
     {input: { Perpignan: 0, Stade_Français: 0 }, output: { Stade_Français: 1 } },
     {input: { UBB: 1, Section_Paloise: 0 }, output: { UBB: 1 } },
@@ -251,6 +251,7 @@ network.train([
 
 ]);
 
+// Prédiction Racing vs ASM - J2 
 const output = network.run({ Racing: 0.5, ASM: 0.5 });
 
 console.log(output);
