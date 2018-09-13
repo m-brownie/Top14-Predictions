@@ -247,7 +247,16 @@ network.train([
     {input: { Stade_Francais: 1, UBB: 0 }, output: { Stade_Francais: 1 } },
     {input: { Grenoble: 0, Stade_Toulousain: 0 }, output: { Stade_Toulousain: 1 } },
     {input: { SU_Agen: 1, Perpignan: 0 }, output: { SU_Agen: 1 } },
-    {input: { Racing: 0, ASM: 1 }, output: { ASM: 1 } }
+    {input: { Racing: 0, ASM: 1 }, output: { ASM: 1 } },
+
+    // Saison 2018/2019 - J3
+    {input: { UBB: 0.5, MHR: 0.5 }, output: { Tie: 1 } },
+    {input: { Stade_Toulousain: 1, Stade_Rochelais: 0 }, output: { Stade_Toulousain: 1 } },
+    {input: { Perpignan: 0, LOU: 1 }, output: { LOU: 1 } },
+    {input: { Racing: 1, SU_Agen: 0 }, output: { Racing: 1 } },
+    {input: { ASM: 1, Stade_Francais: 0 }, output: { ASM: 1 } },
+    {input: { Grenoble: 0, Section_Paloise: 1 }, output: { Section_Paloise: 1 } },
+    {input: { RCT: 1, Castres: 0 }, output: { RCT: 1 } }
 
 ], {
     // Configuartion
@@ -256,6 +265,6 @@ network.train([
 });
 
 // Prédiction Racing vs ASM - J2 
-const output = network.run({ Racing: 0.5, ASM: 0.5 });
+const output = network.run({ Section_Paloise: 0.5, ASM: 0.5 });
 
 console.log(output);
