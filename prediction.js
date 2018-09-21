@@ -256,7 +256,16 @@ network.train([
     {input: { Racing: 1, SU_Agen: 0 }, output: { Racing: 1 } },
     {input: { ASM: 1, Stade_Francais: 0 }, output: { ASM: 1 } },
     {input: { Grenoble: 0, Section_Paloise: 1 }, output: { Section_Paloise: 1 } },
-    {input: { RCT: 1, Castres: 0 }, output: { RCT: 1 } }
+    {input: { RCT: 1, Castres: 0 }, output: { RCT: 1 } },
+
+    // Saison 2018/2019 - J4
+    {input: { LOU: 1, MHR: 0 }, output: { LOU: 1 } },
+    {input: { SU_Agen: 1, UBB: 0 }, output: { SU_Agen: 1 } },
+    {input: { Castres: 1, Grenoble: 0 }, output: { Castres: 1 } },
+    {input: { Section_Paloise: 0, ASM: 1 }, output: { ASM: 1 } },
+    {input: { Stade_Toulousain: 1, Racing: 0 }, output: { Stade_Toulousain: 1 } },
+    {input: { Stade_Rochelais: 1, Perpignan: 0 }, output: { Stade_Rochelais: 1 } },
+    {input: { Stade_Francais: 1, RCT: 0 }, output: { Stade_Francais: 1 } }
 
 ], {
     // Configuartion
@@ -265,6 +274,6 @@ network.train([
 });
 
 // Prédiction Racing vs ASM - J2 
-const output = network.run({ Section_Paloise: 0.5, ASM: 0.5 });
+const output = network.run({ UBB: 0.5, ASM: 0.5 });
 
 console.log(output);
